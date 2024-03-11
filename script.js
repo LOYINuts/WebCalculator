@@ -1,9 +1,10 @@
+// 设置全局变量？计算总值，显示器的buffer，先前的操作符
 let runningTotal = 0;
 let buffer = "0";
 let previousOperator;
-
+// 屏幕
 const screen = document.querySelector(".screen");
-
+// 如果是非数字就进行符号处理，如果是数字就进行数字处理
 function buttonClick(value) {
   if (isNaN(value)) {
     handleSymbol(value);
@@ -12,7 +13,7 @@ function buttonClick(value) {
   }
   screen.innerText = buffer;
 }
-
+// 处理符号，撤回和减号乘号是特殊的unicode字符
 function handleSymbol(symbol) {
   switch (symbol) {
     case 'C':
@@ -29,6 +30,7 @@ function handleSymbol(symbol) {
       runningTotal = 0;
       break;
     case '←':
+      // 撤回就是显示的数字最后一位不要
       if (buffer.length === 1) {
         buffer = "0";
       } else {
@@ -44,7 +46,7 @@ function handleSymbol(symbol) {
       break;
   }
 }
-
+// 进行数学运算
 function handleMath(symbol) {
   if (buffer === '0') {
     return;

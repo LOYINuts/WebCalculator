@@ -11,17 +11,17 @@ html {
   margin: 0;
   padding: 0;
 }
-
+/* 这是整个背景的css */
 body {
   align-items: center;
-  background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+  background: linear-gradient(420deg, #eb92be, #ffef78, #63c9b4);
   display: flex;
   font-family: "Dosis", sans-serif;
   font-display: swap;
   height: inherit;
   justify-content: center;
 }
-
+/* 这个是计算器后面的一个小矩形 */
 .wrapper {
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
@@ -36,7 +36,7 @@ body {
   height: 540px;
   padding: 20px 35px;
 }
-
+/* 这是结果显示器的css */
 .screen {
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
@@ -51,13 +51,13 @@ body {
   text-align: right;
   width: 326px;
 }
-
+/* 这是对每一行的按钮进行css，留出空间 */
 .calc-button-row {
   display: flex;
   justify-content: space-between;
   margin: 5% 0;
 }
-
+/* 按钮样式的编写 */
 .calc-button {
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
@@ -71,7 +71,7 @@ body {
   font-size: 24px;
   height: 65px;
 }
-
+/* last-child代表一组兄弟元素中的最后一个元素，这里也就是我们的右边的运算符按钮 */
 .calc-button:last-child {
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
@@ -82,24 +82,24 @@ body {
   color: #fff;
   background: #d72880;
 }
-
-.calc-button:last-child:hover{
-    background-color: inherit;
-    color: inherit;
+/* 鼠标悬停在按钮上的样式 */
+.calc-button:last-child:hover {
+  background-color: inherit;
+  color: inherit;
 }
 
-.calc-button:hover{
-    background-color: inherit;
+.calc-button:hover {
+  background-color: inherit;
 }
-
-.calc-button:active{
-    background-color: #ffef78;
+/* 点击的样式 */
+.calc-button:active {
+  background-color: #ffef78;
 }
-
-.double{
-    flex-basis: 47%;
+/* 需要放大的那个C */
+.double {
+  flex-basis: 47%;
 }
-
-.triple{
-    flex-basis: 73%;
+/* 需要放大的0 */
+.triple {
+  flex-basis: 73%;
 }

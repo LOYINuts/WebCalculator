@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="style.css" />
     <title>Calculator | LOYINuts</title>
   </head>
-
+<!-- body部分就是计算器的主题，screen就是结果的显示屏 -->
   <body>
     <div class="wrapper">
       <section class="screen">0</section>
 
       <section class="calc-buttons">
+        <!-- 这是所有的按钮类calc-buttons，然后每行再一个分类calc-button-row -->
         <div class="calc-button-row">
+          <!-- 这个是清除按钮，我们需要放大一点，所以给一个特殊的class double -->
           <button class="calc-button double">C</button>
           <button class="calc-button">&larr;</button>
           <button class="calc-button">&divide;</button>
@@ -38,6 +40,7 @@
         </div>
 
         <div class="calc-button-row">
+          <!-- 同理我们要给这个0放大，所以给个特殊的class，也代表了这个放大为3个格子的大小 -->
           <button class="calc-button triple">0</button>
           <button class="calc-button">&equals;</button>
         </div>
